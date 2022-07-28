@@ -11,6 +11,6 @@
 
 ---
 
-- [chap_01](day_01.md)
+- [chap_01](https://github.com/jisuMin/Java/blob/0127ebc8f0bc47224494beba6f3af945ff502889/day_01.md)
 - [chap_02]()
 - 
