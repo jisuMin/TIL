@@ -3,7 +3,7 @@ package chap2;
 public class CastingTest {
 
 	public static void main(String[] args) {
-		byte b=127; //127이상 저장시 오
+		byte b=127; //127이상 저장시 오류
 		int i =b; // (int) b 같은 명시적인 형변환을 안해도 됨 - byte는 int로 변환이 가능하기 때
 		System.out.println("i= "+i);
 		
@@ -12,7 +12,7 @@ public class CastingTest {
 		
 		double d2 =3.14;
 		//int i2 = d2;
-		int i2=(int)d2; //실수 값에서 정수만 가져올 수 있
+		int i2=(int)d2; //실수 값에서 정수만 가져올 수 있음
 		System.out.println("i2= "+i2); // 명시적형변환 (일부값 손실)
 		
 		int i3=128;
@@ -25,7 +25,7 @@ public class CastingTest {
 		System.out.println("c4= "+c4+", i4= "+i4);//아스키코드 97
 		
 		char c5 ='A';
-		int i5= c5;//자동형변
+		int i5= c5;//자동형변환 
 		System.out.println("c5= "+c5+", i5= "+i5);//아스키코드 65
 		
 		//소문자를 대문자로 변경
@@ -39,7 +39,7 @@ public class CastingTest {
 		System.out.println(y); //10이 출력되지만 메모리상 x 값은 1이 증가된 11로 저장
 		x=10;
 		y=++x; // x 값이 먼저 증가 후 y에 대입
-		System.out.println(y); //x값이 먼저 증가되어 11이 출
+		System.out.println(y); //x값이 먼저 증가되어 11이 출럭됨 
 		
 		int s=10;
 		System.out.println(s++); //출력 후 s값이 증가하기 때문에 출력된 값은 10이지만 메모리의 s값은 11이다. 
@@ -50,7 +50,7 @@ public class CastingTest {
 		int result2 = p>10?1:0;//조건에 오는 것은 boolean을 나눌 수 있는 조건이여야 함 
 		double result3 = p>10? 1.1:0;
 		
-		//p가 10보다 크고 20보다 작으면 
+		//p가 10보다 크고 20보다 작으면 1 출력 , 아니면 0 
 		double result4 = p>10 && p<20? 1:0;
 		
 	}
