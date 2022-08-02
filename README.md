@@ -11,6 +11,9 @@
 
 ---
 
-- [chap_01](https://github.com/jisuMin/Java/blob/0127ebc8f0bc47224494beba6f3af945ff502889/day_01.md)
-- [chap_02]()
-- 
+- [chap01_자바 시작하기](https://github.com/jisuMin/Java/blob/0127ebc8f0bc47224494beba6f3af945ff502889/day_01.md)
+- [chap02_변수와 타입]()
+- [chap03_연산자]()
+- [chap04_조건문과 반복문]()
+- [chap05_참조타입]()
+- [chap06_클래스]()
