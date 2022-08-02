@@ -12,7 +12,7 @@
 ---
 
 - [변수와 타입](https://github.com/jisuMin/Java/blob/aa0ec0d85742f2dfad77da4a628969bf83d2cc50/Variable%20&%20type.md)
-    - [예제](https://github.com/jisuMin/TIL/blob/55dc403984885a6b9fb86af8821fa02b7e2850c9/JAVA/day02/VariableTest.java)
+    - [예제_VariableTest.java](https://github.com/jisuMin/TIL/blob/55dc403984885a6b9fb86af8821fa02b7e2850c9/JAVA/day02/VariableTest.java)
 - [연산자]()
 - [조건문과 반복문]()
 - [참조타입]()
