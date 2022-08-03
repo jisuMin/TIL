@@ -9,7 +9,7 @@
 
 ## :mag_right: 01_ JAVA
 
-- [변수와 타입](https://github.com/jisuMin/.md/blob/master/JAVA/01_Variable%20%26%20Type.md)_
+- [변수와 타입](https://github.com/jisuMin/.md/blob/master/JAVA/01_Variable%20%26%20Type.md)
     - [Example](https://github.com/jisuMin/TIL/tree/master/JAVA/day02)
 - [연산자](https://github.com/jisuMin/.md/blob/master/JAVA/02_Operator.md)
     - [Example](https://github.com/jisuMin/TIL/blob/d9386b1f2c226606647b666b208c5e758249ffea/JAVA/day02/CastingTest.java)
