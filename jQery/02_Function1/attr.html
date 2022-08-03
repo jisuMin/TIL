@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("img:first").attr("src","/html/images/drinks.jpg"); //setter
+	$("img").attr("width","100");
+	$("img").attr("height","100");
+	$("img:first").attr("alt","쥬스 사진입니다.");
+	
+	$("img:last").attr({
+		src : "/html/images/americano.jpg",
+		alt : "커피사진입니다.",
+		width : "200",
+		height : "200"
+	});
+	//getter
+	//1번째 이미지 출력 이미지 url
+	//alert($('img:first').attr("src"));
+	
+	//alert($('img').attr("src"));
+	
+	//방법 1
+	/*for ( var i =0; i < $('img').length; i++){
+		alert($("img:eq("+i+")").attr("src"));
+	}
+	*/
+	
+	// 방법 2 . jquery 반복문 내장 함수
+	$('img').each(function(index) {
+		alert($("img:eq("+index+")").attr("src"));
+	})
+	
+	//  img:first src 속성 제거
+	$('img:first').removeAttr("src");
+});//ready end
+
+</script>
+</head>
+<body>
+<img>
+<img>
+</body>
+</html>

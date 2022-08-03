@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('h1#first').css("width","300");
+	//h1태그이면서 아이디가 first 인 것 
+	$('h1#first').click(test1); //h1 태그 내부에 있는 값을 읽어와 div에 삽입 
+	$('h1#first').on('click',function(){
+		$('h1#first').css("width","300");
+		$("div#last").append( "on =>"+$('h1#first').html() );
+	});
+	
+	$('input:button').on('click',function(){
+			$('h1#first').off('click',test1);	
+		});
+	function test1(){
+		$("div#last").append("click =>"+ $('h1#first').html() );
+	}
+});
+
+</script>
+</head>
+<body>
+<h1 id="first"> 클릭해보세요. </h1>
+<input type="button" value="이벤트 멈춤">
+<div id="last"></div>
+</body>
+</html>

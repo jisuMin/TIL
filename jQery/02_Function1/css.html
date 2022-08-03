@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+	//$('div').css("color","red");
+	// 세 개의 div 마다 다른 색상
+	$('div').css("color",function(index){
+		if(index%3==0){ return "red";}
+		else if(index%3 == 1){ return "green";}
+		else if(index %3== 2){ return "blue";}
+		//else { return "pink";};
+	});
+});
+
+</script>
+</head>
+<body>
+<div> 1번째 </div>
+<div> 2번째 </div>
+<div> 3번째 </div>
+<div> 4번째 </div>
+<div> 5번째 </div>
+<div> 6번째 </div>
+</body>
+</html>

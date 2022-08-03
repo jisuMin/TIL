@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+	// 마우스를 올렸을 때 : mousehover, mouseenter
+	// 마우스가 영역에서 벗어났을 때 : mouseleave
+	$('div#box').css({
+		height : "100px",
+		width : "100px",
+		backgroundColor : "orange"
+	});
+	/*$('div#box').on('click',function(){
+		$(this).css("background-color","red");
+	});
+	$('div#box').on('mouseenter',function(){
+		$(this).css("background-color","green");
+	});
+	$('div#box').on('mouseleave',function(){
+		$(this).css("background-color","blue");
+	});*/
+	$('div#box').on(
+		{
+			click : function(event){
+				$(this).html(event.type);
+				$(this).css("background-color","red");
+			},
+			mouseenter : function(){
+				$(this).html(event.type);
+				$(this).css("background-color","green");
+			},
+			mouseleave : function(){
+				$(this).html(event.type);
+				$(this).css("background-color","blue");
+			}
+		}
+	);
+	$('a').on('click',function(ev){
+		// a 태그 기본 동작 취소
+		ev.preventDefault();
+		$('div#box').html("클릭해도 아무 동작 안함.");
+	});
+});//end ready
+
+</script>
+</head>
+<body>
+<div id = "box"></div>
+<a href = "a.html">a.html 링크 </a>
+</body>
+</html>
