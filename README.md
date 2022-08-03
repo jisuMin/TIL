@@ -7,9 +7,7 @@
 
 
 
-### JAVA 
-
----
+## :mag_right: 01_ JAVA
 
 - [변수와 타입](https://github.com/jisuMin/.md/blob/master/JAVA/01_Variable%20%26%20Type.md)
     - [예제 소스코드](https://github.com/jisuMin/TIL/tree/master/JAVA/day02)
@@ -19,3 +17,12 @@
     - [예제 소스코드]()
 - [참조타입]()
 - [클래스]()
+
+
+
+## :mag_right: 02_ jQuery
+
+- [jQuery](https://github.com/jisuMin/.md/blob/master/02_jQuery/01_jQuery.md)
+- [함수_01](https://github.com/jisuMin/.md/blob/master/02_jQuery/02_Function1.md)
+- [함수_02](https://github.com/jisuMin/.md/blob/master/02_jQuery/03_Function2.md)
+- [이벤트](https://github.com/jisuMin/.md/blob/master/02_jQuery/04_Event.md)
