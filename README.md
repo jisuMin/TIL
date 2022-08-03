@@ -11,7 +11,7 @@
 
 ---
 
-- [변수와 타입](hhttps://github.com/jisuMin/.md/blob/master/JAVA/01_Variable%20%26%20Type.md)
+- [변수와 타입](https://github.com/jisuMin/.md/blob/master/JAVA/01_Variable%20%26%20Type.md)
     - [예제 소스코드](https://github.com/jisuMin/TIL/tree/master/JAVA/day02)
 - [연산자](hhttps://github.com/jisuMin/.md/blob/master/JAVA/02_Operator.md)
     - [예제 소스코드](https://github.com/jisuMin/TIL/blob/d9386b1f2c226606647b666b208c5e758249ffea/JAVA/day02/CastingTest.java)
