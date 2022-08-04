@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+	var cnt =0;
+	$("#btnclick").on('click',function(){
+		$("#keyout").html(++cnt + " 번 클릭했습니다. ");
+		$("#newbuttons").append("<input type=button value ='새로 생성한 버튼"+cnt+"' id = 'btnadd'>");
+		
+	});
+	//새로 생성된 버튼 이벤트 처리 방법 
+	$("#newbuttons").on('click',"input:button",function(){
+		$("#keyout").html($(this).val());
+	});
+	$("#btnstop").on('click',function(){
+		//$("#newbuttons").html('');	//새로 생성한 버튼 제거 - html은 기존것을 없애고 새로운 것을 추가 
+		$("#newbuttons").empty(); // 태그 내부의 것을 지움
+		$("#newbuttons").remove(); // 태그까지 제거 
+		$("#btnclick").off('click'); // 더 이상 클릭 안됨 
+		
+	});
+});
+
+</script>
+</head>
+<body>
+<input type=button value="클릭" id="btnclick">
+<input type=button value="중단" id="btnstop">
+<div id="newbuttons"></div>
+<div id="keyout"></div>
+</body>
+</html>

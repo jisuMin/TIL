@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('h1:eq(0)').hide(3000);
+	setTimeout(function(){$('h1:eq(0)').show();},2000);
+	$('h1:eq(1)').fadeIn(3000); //3초 동안 천천히 보여라
+	$('h1:eq(1)').fadeOut(3000);//3초 동안 천천히 사라져라
+	$('h1:eq(2)').slideUp(3000);
+	$('h1:eq(2)').slideDown('slow');
+	
+	$('h1:eq(3)').css({
+		width : "500px",
+		backgroundColor : "green"
+	});
+	$('h1:eq(3)').delay(2000); //2초 동안 중지 (아무 동작 x) 
+	$('h1:eq(3)').animate({
+		width : "1000px",
+		backgroundColor : "blue" //jquery - ui  라이브러리를 설치해야 배경색변경 가능 
+	},1000);
+});
+
+</script>
+</head>
+<body>
+<h1>태그 보이기 / 감추기</h1>
+<h1>태그 페이드인 / 패이드 아웃</h1>
+<h1>태그 슬라이드 하기 </h1>
+<h1>태그 애니메이션</h1>
+</body>
+
+</html>
