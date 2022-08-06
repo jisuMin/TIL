@@ -15,7 +15,8 @@
     - [Example](https://github.com/jisuMin/TIL/blob/d9386b1f2c226606647b666b208c5e758249ffea/JAVA/day02/CastingTest.java)
 - [조건문과 반복문](https://github.com/jisuMin/.md/blob/master/01_JAVA/03_If_For_While.md)
     - [Example]()
-- [참조타입]()
+- [참조타입](https://github.com/jisuMin/.md/blob/master/01_JAVA/04_Reference%20type.md)
+    - [Example]()
 - [클래스]()
 
 
