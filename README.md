@@ -40,4 +40,8 @@
   - [Example](https://github.com/jisuMin/TIL/tree/master/JAVA_Web/02_Servlt_basic)
 - [Servlet_tag](https://github.com/jisuMin/.md/blob/master/03_JAVA_Web/03_Servlet_tag.md)
   - [Example](https://github.com/jisuMin/TIL/tree/master/JAVA_Web/03_Servlet_tag)
+- [doGet_doPost](https://github.com/jisuMin/.md/blob/master/03_JAVA_Web/04_doGet_doPost.md)
+  - [Example](https://github.com/jisuMin/TIL/tree/master/JAVA_Web/04_doGet_doPost)
+
+
 
