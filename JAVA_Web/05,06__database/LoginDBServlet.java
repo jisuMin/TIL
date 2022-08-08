@@ -1,0 +1,62 @@
+package process;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import dao.MemberDAO;
+
+@WebServlet("/LoginDB")
+public class LoginDBServlet extends HttpServlet {
+			
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String id = request.getParameter("id");
+		String pw = request.getParameter("pw");
+		String role = request.getParameter("role");
+		
+		MemberDAO dao = new MemberDAO();
+		int condition = dao.selectMember(id,pw);
+		
+		String output="";
+		
+		if(condition == 2) {
+	
+			if(role.equals("admin")) {
+				output = id + " 계정의 관리자 <br>";
+				output+="<ul><li>모든 사용자 정보 조회</li>";
+				output+="<li>블랙리스트 관리</li>";
+				output+="<li>상품관리</li></ul>";
+			}else if(role.equals("user")){
+				output = id + " 계정의 사용자 ";
+				output+="<ol><li>내 정보 조회</li>";
+				output+="<li>로그아웃</li>";
+				output+="<li>게시판 보기</li></ol>";
+			}
+		}// condition 2 end
+		else if(condition == 1) {
+			output="<h3>암호가 다릅니다.</h3>";
+			output+="<a href='logindb.html'>다시 로그인 하러가기</a>";
+		}// condition 1 end
+		else {
+			output="<h3>회원 정보가 없습니다.</h3>";
+			output+= "<a href='insertdb.html'>회원가입 하러가기</a>";
+		}// condition 3 end
+		response.setContentType("text/html;charset=utf-8");
+		PrintWriter o = response.getWriter();
+		o.print(output);
+		//response.sendRedirect("http://multicampus.co.kr");
+		//response.sendRedirect("http://127.0.0.1:8080/servlettest/calc.html");
+	}
+
+}

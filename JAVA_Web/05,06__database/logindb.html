@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("form").on('submit',function(){		
+	
+		if( $("input:text").val() == "adm" ||
+			$("input:text").val() == "administor" ||
+			$("input:text").val() == "administrator") {
+			$("input:hidden").val("admin");
+		}else{
+			$("input:hidden").val("user");
+		}
+		
+	});
+});
+
+</script>
+</head>
+<body>
+<form action="LoginDB">
+아이디 <input type="text" name="id">
+비밀번호 <input type="password" name="pw">
+<input type="submit" value="로그인">
+<input type="hidden" name="role">
+</form>
+</body>
+</html>
