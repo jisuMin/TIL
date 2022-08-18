@@ -62,12 +62,12 @@
 
 ## :mag_right: Spring
 
-- 01_[Spring_basic](/.md/blob/master/04_Spring/01_Spring_basic.md)
+- 01_[Spring_basic](https://github.com/jisuMin/.md/blob/master/04_Spring/01_Spring_basic.md)
   - [Example]()
-- 02_[AOP]()
+- 02_[AOP](https://github.com/jisuMin/.md/blob/master/04_Spring/02_AOP.md)
   - [Example]()
-- 03_[MVC]()
+- 03_[MVC](https://github.com/jisuMin/.md/blob/master/04_Spring/03_MVC.md)
   - [Example]()
-- 04_[Annotation]()
+- 04_[Annotation](https://github.com/jisuMin/.md/blob/master/04_Spring/04_Annotation.md)
   - [Example]()
 
