@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="member2"><!-- namespace = a인 경우 a.memberlist로 밑에 sql문을 불러옴 -->
+<!-- select * from member -> ResultSet -> MemberDTO -> ArrayList 구현했었음. -->
+<!--  mybatis에서의 구현 -->
+	<select id="memberlist" resultType="memberdto"> <!-- member 테이블의 한개 레코드에 해당하는 것을 MemberDTO에 mapping-->
+		select * from member
+	</select>
+	
+	<select id="membercount" resultType="int"> 
+		select count(*) from member <!-- count 함수는 int 타입, 한 개의 결과  -->
+	</select>
+	
+	<select id="onemember" resultType="memberdto" parameterType="String"> <!--  parameterType=전달받는 값의 타입 = id타입 -->
+		select * from member where id=#{user_id};
+	</select>
+	
+	<select id="paginglist" resultType="memberdto" parameterType="int[]">
+		select * from member order by regdate limit
+		<foreach collection="array" item="num" separator=",">
+		#{num}
+		</foreach>
+	</select>	
+	
+	<insert id="insertmember" parameterType="memberdto">
+		insert into member values(#{id},#{password},#{name},#{phone},#{email},now())
+	</insert>
+	
+	<update id="updatemember" parameterType="memberdto">
+		update member set name=#{name}, phone=#{phone}, email=#{email} where id=#{id}
+	</update>
+	
+	<delete id="deletemember" parameterType="String">
+		delete from member where id=#{id}
+	</delete>
+	
+	<select id="searchlist" resultType="memberdto" parameterType="memberdto">
+		select * from member where
+		<choose>
+			<when test="name != null"> name like concat('%',#{name},'%')</when>
+			<when test="email != null">email like concat('%',#{email},'%')</when>
+			<when test="phone != null">phone like concat('%',#{phone},'%')</when>
+			<when test="id != null">id like concat('%',#{id},'%')</when>
+		</choose>
+		order by id
+	</select>
+</mapper>

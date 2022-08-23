@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+<!-- spring에서 제공해주는 datasource로 객체 변경  -->
+<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+	<property name="url" value="jdbc:mysql://127.0.0.1:3306/memberdb"/>
+	<property name="username" value="emp2"/>
+	<property name="password" value="emp2"/>
+</bean>
+<!--  mybatis 연동 / sql mapping 파일 위치  -->
+<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+	<property name="dataSource" ref="dataSource"/>
+	<property name="configLocation" value="classpath:spring/mybatis/mybatis-config.xml" />
+	<property name="mapperLocations" value="classpath:spring/mybatis/sql-mapping.xml" />
+</bean>
+
+<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+	<constructor-arg ref="sqlSessionFactory"></constructor-arg>
+</bean>
+<!--  spring annotation 인식 패키지 설정  -->
+<context:component-scan base-package="spring.mybatis">
+
+</context:component-scan>
+</beans>
