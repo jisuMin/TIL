@@ -1,5 +1,6 @@
-package spring.mybatis;
+package board.spring.mybatis;
 //JDBC -- MYBATIS
+
 public class MemberDTO {
 	String id; // varchar(30) 
 	int password;// int 
