@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="product">
+
+	<select id="boardcount" resultType="int">
+	select count(*) from product
+	</select>
+	
+	<select id="pagingboard" resultType="productDTO" parameterType="int">
+	select * from product order by product_time desc limit #{limit} , 4
+	</select>
+	
+	<select id="searchcount" resultType="int" parameterType="productDTO">
+	select count(*) from product where product_name = #{product_name} and product_category= #{product_category}
+	</select>
+	
+	<select id="searchboard" resultType="productDTO" parameterType="productDTO">
+	select * from product where product_name like CONCAT('%', #{product_name}, '%') and product_category= #{product_category} order by product_time desc
+	</select>
+	<!-- 메인페이지 , 검색 -->
+	
+	<select id="listDetail" resultType="productDTO" parameterType="int">
+ 	select * from product where product_seq = #{seq}
+	</select>
+
+	<select id="commentlist" resultType="commentDTO" parameterType="int">
+		 select * from comment where productnum=#{seq}
+	</select>
+	
+	<insert id="commentinsert" parameterType="commentDTO">
+	insert into	comment(productnum,writer,content,ctime)
+	values(#{productnum} ,#{writer}, #{content}, now())
+	</insert>
+	<!-- 댓글 , 상세페이지 -->
+	
+	<update id="pulluptime" parameterType="int">
+	update product set product_time = now() where product_seq = #{product_seq} <!-- and memberid=#memberid# -->
+	</update>
+	
+	<select id="detail" parameterType="int" resultType="productDTO">
+	select * from product where product_seq = #{product_seq}
+	</select>
+	<!-- 끌어올리기 -->
+	
+	<delete id="productdelete" parameterType="productDTO">
+	delete from product where product_seq=#{seq}
+	</delete>	
+	<!-- 게시글 삭제 -->
+	
+	<update id="updateProduct" parameterType="productDTO" >
+	update product
+	set   product_name=#{product_name},
+	      product_title=#{product_title},
+	      product_price=#{product_price},
+	      product_category=#{product_category},
+	      product_time= now(),
+	      product_image=#{product_image},
+	      product_info=#{product_info}
+	where product_seq=#{product_seq}
+	</update>
+	<!-- 게시글 수정 -->
+	
+	<select id="pagingmyboard" resultType="productDTO" parameterType="String">
+	select * from product where product_member = #{id} order by product_time
+	</select>
+	<!-- 마이페이지 -->
+	
+	<insert id="insertproduct" parameterType="productDTO">
+	insert into product (product_name , product_title , product_category , product_price , product_time , product_image , product_info , product_member) 
+	values ( #{product_name}, #{product_title} , #{product_category} ,#{product_price} ,now() ,#{product_image} , #{product_info} ,#{product_member})
+	</insert>
+ 	<!-- 글쓰기 -->
+
+</mapper>
