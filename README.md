@@ -50,12 +50,8 @@
 
 - 01_[Spring_basic](https://github.com/jisuMin/.md/blob/master/04_Spring/01_Spring_basic.md)
 - 02_[AOP](https://github.com/jisuMin/.md/blob/master/04_Spring/02_AOP.md)
-- 03_[MVC](https://github.com/jisuMin/.md/blob/master/04_Spring/03_MVC.md)
-- 04_[Annotation](https://github.com/jisuMin/.md/blob/master/04_Spring/04_Annotation.md)
-- 05_[JDBC](https://github.com/jisuMin/.md/blob/master/04_Spring/05_JDBC.md)
-- 06_[Mybatis](https://github.com/jisuMin/.md/blob/master/04_Spring/06_Mybatis.md)
-- 07_[Spring_Mybatis](https://github.com/jisuMin/.md/blob/master/04_Spring/07_Spring_Mybatis.md)
-- 08_[File](https://github.com/jisuMin/.md/blob/master/04_Spring/08_File.md)
-- :grey_exclamation:[Make_Board](https://github.com/jisuMin/.md/blob/master/09_Finall_Make_Board.md):grey_exclamation:
-  - [source 보러가기]()
-
+- 03_[Mybatis](https://github.com/jisuMin/.md/blob/master/04_Spring/03_Mybatis.md)
+- 04_[Spring_Mybatis](https://github.com/jisuMin/.md/blob/master/04_Spring/04_Spring_Mybatis.md)
+- 05_[File](https://github.com/jisuMin/.md/blob/master/04_Spring/05_File.md)
+- 06_:grey_exclamation:[Make_Board](https://github.com/jisuMin/.md/blob/master/06_Finall_Make_Board.md):grey_exclamation:[source 보러가기]()
+- 07_:heavy_exclamation_mark:[Semi_Project]():heavy_exclamation_mark:[source 보러가기]()
