@@ -53,5 +53,6 @@
 - 03_[Mybatis](https://github.com/jisuMin/.md/blob/master/04_Spring/03_Mybatis.md)
 - 04_[Spring_Mybatis](https://github.com/jisuMin/.md/blob/master/04_Spring/04_Spring_Mybatis.md)
 - 05_[File](https://github.com/jisuMin/.md/blob/master/04_Spring/05_File.md)
-- 06_:grey_exclamation:[Make_Board](https://github.com/jisuMin/.md/blob/master/06_Finall_Make_Board.md):grey_exclamation:[source 보러가기]()
-- 07_:heavy_exclamation_mark:[Semi_Project]():heavy_exclamation_mark:[source 보러가기]()
+- 06_:grey_exclamation:[Make_Board](https://github.com/jisuMin/.md/blob/master/06_Make_Board.md):grey_exclamation:[source 보러가기]()
+- 07_:heavy_exclamation_mark:[Semi_Project](https://github.com/jisuMin/.md/blob/master/07_Semi_Project.md):heavy_exclamation_mark:[source 보러가기]()
+
